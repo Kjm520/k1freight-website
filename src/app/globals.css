@@ -12,3 +12,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@theme {
+  --color-logo-blue: #0437f2;
+}

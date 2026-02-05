@@ -10,9 +10,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='flex min-h-screen border-yellow-400 border-6'>
+      <body>
+        <main className="flex flex-col w-screen min-h-screen bg-gray-700 bg-gradient-to-bl from-[#032e55] to to-black -z-10">
         {children}
-      </body>
+        </main>
+        </body>
+
+
     </html>
   );
 }

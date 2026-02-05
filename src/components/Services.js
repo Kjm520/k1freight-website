@@ -1,5 +1,11 @@
 export default function Services() {
-    return (
-    <div className="border-2 border-blue-600">Services</div>
-)
+  return (
+    <main>
+        <section>
+      <div className="border-white border-1 h-screen">Services Section</div></section>
+      <section>
+        
+      </section>
+    </main>
+  );
 }
