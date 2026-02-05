@@ -6,6 +6,9 @@ substitutions:
   _SERVICE: k1freight
   _IMAGE: ${_AR_HOST}/${_AR_PROJECT}/${_AR_REPO}/${_SERVICE}:${SHORT_SHA}
 
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
   - name: gcr.io/cloud-builders/docker
     args: ["build", "-t", "${_IMAGE}", "."]
@@ -17,18 +20,12 @@ steps:
     entrypoint: gcloud
     args:
       [
-        "run",
-        "deploy",
-        "${_SERVICE}",
-        "--image",
-        "${_IMAGE}",
-        "--region",
-        "${_REGION}",
-        "--platform",
-        "managed",
-        "--port",
-        "8080",
-        "--allow-unauthenticated",
+        "run","deploy","${_SERVICE}",
+        "--image","${_IMAGE}",
+        "--region","${_REGION}",
+        "--platform","managed",
+        "--port","8080",
+        "--allow-unauthenticated"
       ]
 
 images:
