@@ -1,8 +1,10 @@
 substitutions:
+  _REGION: us-central1
+  _AR_HOST: us-central1-docker.pkg.dev
+  _AR_PROJECT: k1freight-website
   _AR_REPO: web-apps
   _SERVICE: k1freight
-  _REGION: us-central1
-  _IMAGE: $_REGION-docker.pkg.dev/$PROJECT_ID/$_AR_REPO/$_SERVICE:$SHORT_SHA
+  _IMAGE: ${_AR_HOST}/${_AR_PROJECT}/${_AR_REPO}/${_SERVICE}:${SHORT_SHA}
 
 steps:
   - name: gcr.io/cloud-builders/docker
@@ -15,12 +17,18 @@ steps:
     entrypoint: gcloud
     args:
       [
-        "run","deploy","${_SERVICE}",
-        "--image","${_IMAGE}",
-        "--region","${_REGION}",
-        "--platform","managed",
-        "--port","8080",
-        "--allow-unauthenticated"
+        "run",
+        "deploy",
+        "${_SERVICE}",
+        "--image",
+        "${_IMAGE}",
+        "--region",
+        "${_REGION}",
+        "--platform",
+        "managed",
+        "--port",
+        "8080",
+        "--allow-unauthenticated",
       ]
 
 images:
