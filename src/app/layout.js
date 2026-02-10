@@ -9,14 +9,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body>
-        <main className="flex flex-col w-screen min-h-screen bg-gray-700 bg-gradient-to-bl from-[#032e55] to to-black -z-10">
-        {children}
-        </main>
-        </body>
-
-
+        <main className="flex flex-col w-screen min-h-screen bg-gray-700 bg-gradient-to-bl from-[#032e55] to to-black -z-10">{children}</main>
+      </body>
     </html>
   );
 }
