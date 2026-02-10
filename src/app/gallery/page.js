@@ -1,4 +1,4 @@
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/structural/NavBar";
 
 export default function Gallery() {
   return (
