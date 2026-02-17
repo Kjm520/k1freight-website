@@ -1,6 +1,5 @@
-node_modules
-npm-debug.log
-.next/cache
 .git
 .gitignore
 .DS_Store
+.vscode
+backups

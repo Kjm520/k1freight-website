@@ -1,20 +1,21 @@
-# ---- Build stage ----
-FROM node:20-alpine AS builder
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci
-COPY . .
-# Next.js standalone output goes into .next/standalone
-RUN npm run build
+# Static site on Cloud Run (no Next build)
+FROM nginx:alpine
 
-# ---- Runtime stage ----
-FROM node:20-alpine AS runner
-WORKDIR /app
-ENV NODE_ENV=production
-ENV PORT=8080
-# Copy Next standalone server and static assets
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/static ./.next/static
+# Cloud Run listens on 8080
+RUN printf '%s\n' \
+'server {' \
+'  listen 8080;' \
+'  server_name _;' \
+'  root /usr/share/nginx/html;' \
+'  index index.html;' \
+'' \
+'  location / {' \
+'    try_files $uri $uri/ =404;' \
+'  }' \
+'}' \
+> /etc/nginx/conf.d/default.conf
+
+# Copy your static site root
+COPY site/ /usr/share/nginx/html/
+
 EXPOSE 8080
-CMD ["node", "server.js"]
