@@ -1,3 +1,7 @@
+
+
+
+OLD WAY:
 Code in VS Code
 Push to GitHub (master branch).
 Cloud Build trigger fires on that branch push.
