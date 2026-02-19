@@ -193,7 +193,7 @@
       color: var(--text-dim); margin-top: 2px;
     }
 
-    .section-inner { max-width: 1280px; margin: 0 auto; padding: 0 72px; }
+    .section-inner { max-width: 1520px; margin: 0 auto; padding: 0 56px; }
     .section-label {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px; font-weight: 600;
@@ -206,7 +206,7 @@
       line-height: 1; letter-spacing: 0.03em; color: var(--white);
     }
 
-    .positioning { padding: 120px 0; background: var(--charcoal); }
+    .positioning { padding: 60px 0 120px; background: var(--charcoal); }
     .pos-grid {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 80px; align-items: center; margin-top: 64px;
@@ -270,9 +270,9 @@
     .services { padding: 120px 0; background: var(--charcoal); }
     .services-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 24px; margin-top: 48px; padding: 0 72px;
+      gap: 24px; margin-top: 48px;
     }
-    .service-card { position: relative; overflow: hidden; aspect-ratio: 3/4; cursor: default; }
+    .service-card { position: relative; overflow: hidden; aspect-ratio: 4/5; cursor: default; }
     .service-card img {
       width: 100%; height: 100%; object-fit: cover;
       filter: brightness(0.42) saturate(0.5);
@@ -340,7 +340,7 @@
       color: var(--text-dim); margin-top: 6px;
     }
 
-    .gallery-strip { padding: 100px 0 80px; background: var(--charcoal); }
+    .gallery-strip { padding: 100px 0 40px; background: var(--charcoal); }
     .gallery-strip .section-inner { padding-bottom: 0; }
     .ticker-outer { position: relative; overflow: hidden; margin-top: 48px; }
     .ticker-outer:hover .ticker-track { animation-play-state: paused; }
@@ -394,7 +394,7 @@
     .icon.good { color: var(--blue-bright); }
 
     .contact { padding: 120px 0; background: var(--charcoal); border-top: 1px solid var(--rule); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 64px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: stretch; }
     .contact-info p { font-size: 16px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 40px; }
     .contact-details { display: flex; flex-direction: column; gap: 16px; }
     .contact-row {
@@ -414,34 +414,13 @@
       font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-dim);
     }
     .contact-row-value { font-size: 16px; color: var(--text-primary); }
-    .contact-form { display: flex; flex-direction: column; gap: 16px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 8px; }
-    .form-group label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-dim);
+    .contact-map { position: relative; min-height: 480px; height: 100%; border: 1px solid var(--rule); overflow: hidden; border-radius: 10px; }
+    .contact-map iframe {
+      width: 100%; height: 100%; position: absolute; inset: 0; border: 0; display: block;
+      filter: brightness(0.55) grayscale(0.2);
+      transition: filter 0.4s ease;
     }
-    .form-group input,
-    .form-group textarea {
-      background: var(--panel); border: 1px solid var(--rule);
-      color: var(--text-primary); font-family: 'Barlow', sans-serif;
-      font-size: 15px; font-weight: 300; padding: 14px 18px;
-      outline: none; transition: border-color 0.2s; width: 100%;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus { border-color: var(--blue-bright); }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--text-dim); }
-    .form-submit {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
-      background: var(--blue-bright); color: var(--charcoal);
-      border: none; padding: 16px 40px; cursor: pointer; width: 100%; margin-top: 8px;
-      transition: background 0.2s;
-    }
-    .form-submit:hover { background: #2880ff; }
-    .form-submit:disabled { background: #1a3a1a; color: #4a8a4a; cursor: default; }
+    .contact-map:hover iframe { filter: brightness(0.85) grayscale(0); }
 
     footer {
       background: var(--charcoal); border-top: 1px solid var(--rule);
@@ -475,10 +454,8 @@
       .hero { padding: 0 32px 220px; }
       .hero::before { left: 32px; }
       .section-inner { padding: 0 32px; }
-      .services-grid { padding: 0 32px; }
       .pos-grid, .partnership-inner, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
       .differ-grid, .services-grid, .whyus-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
       .hero-stats { display: grid; grid-template-columns: 1fr 1fr; }
       footer { flex-direction: column; gap: 20px; text-align: center; padding: 32px 24px; }
     }
@@ -518,6 +495,17 @@
       <div class="stat-item"><div class="stat-num">13K+</div><div class="stat-label">Asset Drivers via Ryder</div></div>
       <div class="stat-item"><div class="stat-num">OD</div><div class="stat-label">Over-Dimensional Certified</div></div>
       <div class="stat-item"><div class="stat-num">Direct</div><div class="stat-label">Your Broker Answers the Phone</div></div>
+    </div>
+  </section>
+
+  <section class="gallery-strip" id="gallery">
+    <div class="section-inner">
+      <h2 class="section-title reveal">The Work We Do.</h2>
+    </div>
+    <div class="ticker-outer">
+      <div class="ticker-fade-left"></div>
+      <div class="ticker-fade-right"></div>
+      <div class="ticker-track" id="tickerTrack"></div>
     </div>
   </section>
 
@@ -588,8 +576,7 @@
     <div class="section-inner">
       <p class="section-label reveal">What We Move</p>
       <h2 class="section-title reveal">Services</h2>
-    </div>
-    <div class="services-grid">
+      <div class="services-grid">
       <div class="service-card reveal">
         <img src="public/img/services_section/1.jpg" alt="Truckload" loading="lazy" />
         <div class="service-overlay">
@@ -614,6 +601,7 @@
           <p class="service-desc">When a delayed shipment means a plant shutdown or a region without power, expedited is not optional — it's the only acceptable outcome.</p>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -655,18 +643,6 @@
     </div>
   </section>
 
-  <section class="gallery-strip" id="gallery">
-    <div class="section-inner">
-      <p class="section-label reveal">Original Content</p>
-      <h2 class="section-title reveal">The Work We Do.</h2>
-    </div>
-    <div class="ticker-outer">
-      <div class="ticker-fade-left"></div>
-      <div class="ticker-fade-right"></div>
-      <div class="ticker-track" id="tickerTrack"></div>
-    </div>
-  </section>
-
   <section class="whyus">
     <div class="section-inner">
       <p class="section-label reveal">The Difference</p>
@@ -696,10 +672,10 @@
 
   <section class="contact" id="contact">
     <div class="section-inner">
-      <p class="section-label reveal">Get In Touch</p>
-      <h2 class="section-title reveal">Your Freight.<br>One Call.</h2>
       <div class="contact-grid">
         <div class="contact-info reveal">
+          <p class="section-label">Get In Touch</p>
+          <h2 class="section-title" style="margin-bottom:32px">Your Freight.<br>One Call.</h2>
           <p>Tell us what you're moving and when it needs to arrive. We'll respond promptly with a quote and a clear plan. No call centers, no follow-up chains — direct contact from the start.</p>
           <div class="contact-details">
             <a class="contact-row" href="tel:2052020699">
@@ -731,17 +707,9 @@
             </div>
           </div>
         </div>
-        <form class="contact-form reveal" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group"><label>First Name</label><input type="text" placeholder="John" required /></div>
-            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith" required /></div>
-          </div>
-          <div class="form-group"><label>Company</label><input type="text" placeholder="Company Name" /></div>
-          <div class="form-group"><label>Email</label><input type="email" placeholder="john@company.com" required /></div>
-          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(205) 555-0100" /></div>
-          <div class="form-group"><label>Details</label><textarea placeholder="Origin, destination, dimensions, timeline, or anything else we should know..."></textarea></div>
-          <button class="form-submit" type="submit">Send Request</button>
-        </form>
+        <div class="contact-map reveal">
+          <iframe src="https://maps.google.com/maps?q=K1+Freight+Birmingham+Alabama&z=6&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -799,13 +767,6 @@
       });
     })();
 
-    // Form submit
-    function handleSubmit(e) {
-      e.preventDefault();
-      var btn = e.target.querySelector('.form-submit');
-      btn.textContent = "Request Sent — We'll Be In Touch";
-      btn.disabled = true;
-    }
 
     // Live truckload counter
     (function() {
