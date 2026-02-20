@@ -1,5 +1,7 @@
 {
     "javascript.suggest.paths": false,
     "css.lint.unknownAtRules": "ignore",
-    "liveServer.settings.root": "/site"
+    "liveServer.settings.root": "/site",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100
 }
