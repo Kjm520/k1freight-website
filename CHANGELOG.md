@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-03-04
+
+- Fixed image paths after img/ directory restructure (logos moved to subdirs, services images missing leading slash)
+- Created site/public/static/ directory convention for externally-referenced assets (email signature images)
+- Added site/public/static/README.txt documenting do-not-move convention
+- Mobile responsive fixes: hero padding, stat bar 2-column grid, overflow-x hidden on html element
+- Hidden hero-actions on mobile
+- Moved stat bar out of absolute overlay into normal block flow below hero section
+- Wrapped hero section + stat bar in .hero-wrapper (min-height: 100vh, flex column) so stat bar is visible on first load without scrolling
+- Added mobile overrides for all section padding (100-120px → 60px) and heatmap map height (820px → 300px)
+
 ## 2026-02-20
 
 - Added Successful Miles animated counter as 3rd hero stat box
