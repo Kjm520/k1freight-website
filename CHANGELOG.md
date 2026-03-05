@@ -2,7 +2,7 @@
 
 ## 2026-03-05
 
-- Added exiftool to Dockerfile: strips all image metadata and writes K1 Freight LLC copyright/ownership on every build
+- Added exiftool to Dockerfile via multi-stage build: strips all image metadata and writes K1 Freight LLC copyright/ownership on every build; Perl/exiftool excluded from final image
 - Cleaned up .gitignore (removed Next.js/Vercel boilerplate, added .claude/)
 - Updated .dockerignore (added .claude/, *.pem, .env*, doc files)
 
