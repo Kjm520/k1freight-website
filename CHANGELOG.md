@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-03-05
+
+- Added exiftool to Dockerfile: strips all image metadata and writes K1 Freight LLC copyright/ownership on every build
+- Cleaned up .gitignore (removed Next.js/Vercel boilerplate, added .claude/)
+- Updated .dockerignore (added .claude/, *.pem, .env*, doc files)
+
 ## 2026-03-04
 
 - Fixed image paths after img/ directory restructure (logos moved to subdirs, services images missing leading slash)

@@ -1,44 +1,15 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Claude Code local settings
+.claude/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# gallery images
-/public/gallery
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
+# Environment / secrets
 .env*
 
-# vercel
-.vercel
+# macOS
+.DS_Store
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Certificates
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
