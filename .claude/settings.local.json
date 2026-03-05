@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(py -c:*)",
-      "WebFetch(domain:k1freight.com)",
-      "Bash(curl:*)"
-    ]
-  }
-}
