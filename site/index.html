@@ -1154,7 +1154,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="nav-cta" href="#contact">Request a Quote</a>
+    <a class="nav-cta" href="#contact">Contact Us</a>
   </nav>
 
   <div class="hero-wrapper">
@@ -1625,7 +1625,7 @@
             var count = parseInt(parts[1].trim(), 10);
             if (isNaN(count)) return;
             if (CA_PROVINCES.has(code)) return;
-            var tooltip = code + ': ' + count.toLocaleString('en-US') + ' loads';
+            var tooltip = code + ': ' + count.toLocaleString('en-US');
             data.addRows([['US-' + code, count, tooltip]]);
           });
 
