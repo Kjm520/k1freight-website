@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-03-17
+
+- Added fallback static values (2,567,861 miles / 4,852 truckloads) to stat counters — shown if Google Sheets fetch fails or returns invalid data
+
 ## 2026-03-05
 
 - Added exiftool to Dockerfile via multi-stage build: strips all image metadata and writes K1 Freight LLC copyright/ownership on every build; Perl/exiftool excluded from final image

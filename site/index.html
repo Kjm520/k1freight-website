@@ -1563,19 +1563,23 @@
             return;
           }
         } catch (e) { }
+        var FALLBACK_MILES = 2567861;
+        var FALLBACK_LOADS = 4852;
         fetch(SHEETS_URL)
           .then(function (r) { return r.text(); })
           .then(function (txt) {
             var parts = txt.trim().split(',');
             var miles = parseFloat(parts[0]);
             var loads = parseFloat(parts[1]);
+            if (isNaN(miles)) miles = FALLBACK_MILES;
+            if (isNaN(loads)) loads = FALLBACK_LOADS;
             try { sessionStorage.setItem(CACHE_KEY, miles + ',' + loads); sessionStorage.setItem(CACHE_TS, now); } catch (e) { }
-            if (elMile && !isNaN(miles)) animateTo(elMile, miles);
-            if (elLoad && !isNaN(loads)) animateTo(elLoad, loads);
+            if (elMile) animateTo(elMile, miles);
+            if (elLoad) animateTo(elLoad, loads);
           })
           .catch(function () {
-            if (elMile) elMile.textContent = '';
-            if (elLoad) elLoad.textContent = '';
+            if (elMile) animateTo(elMile, FALLBACK_MILES);
+            if (elLoad) animateTo(elLoad, FALLBACK_LOADS);
           });
       }
 
