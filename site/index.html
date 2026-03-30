@@ -1622,6 +1622,8 @@
           data.addColumn('number', 'Loads');
           data.addColumn({ type: 'string', role: 'tooltip' });
 
+          var rows = [];
+          var totalLoads = 0;
           csv.trim().split('\n').forEach(function (line) {
             var parts = line.trim().split(',');
             if (parts.length < 2) return;
@@ -1629,8 +1631,14 @@
             var count = parseInt(parts[1].trim(), 10);
             if (isNaN(count)) return;
             if (CA_PROVINCES.has(code)) return;
-            var tooltip = code + ': ' + count.toLocaleString('en-US');
-            data.addRows([['US-' + code, count, tooltip]]);
+            rows.push({ code: code, count: count });
+            totalLoads += count;
+          });
+
+          rows.forEach(function (r) {
+            var pct = totalLoads > 0 ? ((r.count / totalLoads) * 100).toFixed(1) : '0.0';
+            var tooltip = r.code + ': ' + pct + '%';
+            data.addRows([['US-' + r.code, r.count, tooltip]]);
           });
 
           var isMobile = window.innerWidth < 900;
