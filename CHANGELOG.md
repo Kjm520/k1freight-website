@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-04-30
+
+- Added page-load ping to `feedback.k1apps.dev` for usage tracking
+
 ## 2026-03-17
 
 - Added fallback static values (2,567,861 miles / 4,852 truckloads) to stat counters — shown if Google Sheets fetch fails or returns invalid data
