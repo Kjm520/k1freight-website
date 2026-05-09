@@ -13,4 +13,4 @@ runs next build (standalone output)
 produces a runnable Node server (server.js) + minimal files
 docker push uploads the built image to Artifact Registry (web-apps/k1freight:<sha>).
 gcloud run deploy tells Cloud Run to use that new image.
-Cloud Run creates a new revision and shifts traffic to it (100% in your config).
+Cloud Run creates a new revision and shifts traffic to it.
