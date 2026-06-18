@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-06-18
+
+- Fixed gallery images that rendered rotated (EXIF orientation): baked rotation into pixels for 10, 59 (180°) and 78, 84, 99, 134 (90°), then stripped all EXIF from the 142 source gallery files that still carried metadata. Source files now have no orientation flag, so they render correctly regardless of browser/CSS or the Dockerfile's build-time exiftool strip.
+
 ## 2026-04-30
 
 - Added page-load ping to `feedback.k1apps.dev` for usage tracking
