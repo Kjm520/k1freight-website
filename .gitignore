@@ -1,0 +1,19 @@
+# defaults
+.env*
+
+# Claude Code local settings
+.claude/
+
+# macOS
+.DS_Store
+
+# Certificates
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+
+# Sensitive Files
+.vscode/
+.env
