@@ -1,9 +1,9 @@
 # K1 Freight
 
-> K1 Freight is a freight brokerage based in Birmingham, Alabama, specializing in
-> over-dimensional, expedited, and mission-critical industrial freight across the United
-> States and eastern Canada. Every load is handled personally by an experienced broker —
-> not a call center.
+> K1 Freight is a freight brokerage based in Birmingham, Alabama. We move standard
+> truckload and LTL freight every day and specialize in over-dimensional, expedited, and
+> mission-critical industrial freight across the United States and eastern Canada. Every
+> load is handled start to finish by the same experienced team — not a call center.
 
 ## Who we are
 
@@ -14,9 +14,9 @@ Ryder in 2024), with access to 13,000+ asset drivers and Ryder's carrier screeni
 infrastructure.
 
 The authority K1 operates under holds both asset-carrier authority and broker authority
-("dual authority"). That distinction matters: there are real trucks and real skin in the
-game behind this brokerage — not a laptop middleman. Some large shippers require asset
-authority in their SOPs while still wanting a broker's flexibility; K1 satisfies both.
+("dual authority"). That distinction matters: there is a real trucking company behind
+this brokerage — not a laptop middleman. Some large shippers require backing asset
+authority while still wanting a broker's flexibility; K1 satisfies both.
 
 ## How we work
 
@@ -25,7 +25,9 @@ authority in their SOPs while still wanting a broker's flexibility; K1 satisfies
 - We do not sell on lowest cost, because that claim is rarely true in this industry.
   Instead we match high-quality carriers to each load's requirements and pay carriers
   fair, livable rates — which is why the same trusted operators keep hauling for our
-  customers, and why customers often see familiar drivers on repeat lanes.
+  customers, and why customers often see familiar drivers on repeat lanes. When lowest
+  cost is the customer's priority, we have the diverse experience needed to adapt — and
+  to know which options are safe for a given shipment.
 - Detail-first operation: equipment specifications verified before dispatch, receivers
   called ahead when a site has known quirks, requirements remembered from months ago.
 - Directly reachable, including outside business hours, for time-critical freight.

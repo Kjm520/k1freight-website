@@ -5,6 +5,10 @@
 - Added DRAFT-invisible-layer.md — proposed SEO/AI-search metadata layer (meta tags, JSON-LD, robots.txt, sitemap.xml, llms.txt) for review; no site files changed yet
 - Draft revised per Kevin's review: business hours + after-hours emergency availability (was 24/7), added Logistics Consulting & Optimization as fourth service; canonical bare domain, gallery/1.jpg og:image, and memberOf Ryder confirmed
 - Applied the invisible layer: meta description, canonical, Open Graph/Twitter tags, and LocalBusiness JSON-LD added to site/index.html head; created site/robots.txt (AI-crawler welcome + sitemap declaration), site/sitemap.xml, and site/llms.txt. Hours: Mon–Fri 7:00–17:00, emergency any hour. JSON-LD validated as parseable JSON
+- Added priceRange "Quoted per load" to JSON-LD after Rich Results Test flagged the empty recommended field (address/zip warnings intentionally left — city-only policy)
+- llms.txt revised per Kevin: dual-authority paragraph now says "a real trucking company behind this brokerage" (not "real trucks"/"skin in the game"); summary and How-we-work gained standard-freight framing (move standard freight daily, specialize in critical, adapt when lowest cost is the priority); "same experienced team" replaces "an experienced broker" in the summary
+- Added sameAs to JSON-LD linking the Google Business Profile: Maps share link + stable CID URL (cid=7786980377244906296, verified resolving); closes the site↔profile corroboration loop
+- Dockerfile nginx config: www.k1freight.com now 301-redirects to the bare canonical domain (new server block); existing catch-all marked default_server so bare domain, run.app URL, and health checks serve normally. DNS www CNAME and Cloud Run www domain mapping unchanged — both required for the redirect to be reachable
 
 ## 2026-06-18
 

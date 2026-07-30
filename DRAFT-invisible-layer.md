@@ -61,6 +61,7 @@ run by this person, doing these things." Goes at the end of `<head>`.
   "foundingDate": "2024-03-18",
   "telephone": "+1-205-202-0699",
   "email": "kevin@k1freight.com",
+  "priceRange": "Quoted per load",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Birmingham",

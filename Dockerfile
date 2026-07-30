@@ -15,7 +15,7 @@ FROM nginx:alpine
 # Cloud Run listens on 8080
 RUN printf '%s\n' \
 'server {' \
-'  listen 8080;' \
+'  listen 8080 default_server;' \
 '  server_name _;' \
 '  root /usr/share/nginx/html;' \
 '  index index.html;' \
@@ -23,6 +23,13 @@ RUN printf '%s\n' \
 '  location / {' \
 '    try_files $uri $uri/ =404;' \
 '  }' \
+'}' \
+'' \
+'# www is a valid hostname but not the canonical one: permanent-redirect to bare domain' \
+'server {' \
+'  listen 8080;' \
+'  server_name www.k1freight.com;' \
+'  return 301 https://k1freight.com$request_uri;' \
 '}' \
 > /etc/nginx/conf.d/default.conf
 
