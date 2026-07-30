@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-30
+
+- Added DRAFT-invisible-layer.md — proposed SEO/AI-search metadata layer (meta tags, JSON-LD, robots.txt, sitemap.xml, llms.txt) for review; no site files changed yet
+- Draft revised per Kevin's review: business hours + after-hours emergency availability (was 24/7), added Logistics Consulting & Optimization as fourth service; canonical bare domain, gallery/1.jpg og:image, and memberOf Ryder confirmed
+- Applied the invisible layer: meta description, canonical, Open Graph/Twitter tags, and LocalBusiness JSON-LD added to site/index.html head; created site/robots.txt (AI-crawler welcome + sitemap declaration), site/sitemap.xml, and site/llms.txt. Hours: Mon–Fri 7:00–17:00, emergency any hour. JSON-LD validated as parseable JSON
+
 ## 2026-06-18
 
 - Fixed gallery images that rendered rotated (EXIF orientation): baked rotation into pixels for 10, 59 (180°) and 78, 84, 99, 134 (90°), then stripped all EXIF from the 142 source gallery files that still carried metadata. Source files now have no orientation flag, so they render correctly regardless of browser/CSS or the Dockerfile's build-time exiftool strip.
