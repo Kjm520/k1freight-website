@@ -20,19 +20,10 @@ reviews?
 
 
 
-When you next email anyone externally, glance at a Show-original once more; DKIM: PASS with domain k1freight.com is the final ground truth. (Also worth an eventual retirement note: the old test showed Google had been fallback-signing since ~Nov 2025, so this closed a nine-month gap.)
-
 [07/30/2026] TODO: Begin Tier 2 AI/SEO 
 
 [07/30/2026] consider alabamafreight.com domain's inflow effect and if it can be utilized
 
 
-
-
-verify DNS changes
-k1apps.dev
-truckload.io
-trkld.io
-k1freight.com  (verified 09/02/2026 — all core records correct, see CHANGELOG)
 
 [09/02/2026] Optional hardening, none of it urgent: DNSSEC at Dynadot; CAA record; HSTS header in the nginx block (Dockerfile). Trap: if CAA is ever added it MUST include `0 issue "pki.goog"` or Cloud Run's managed cert renewal breaks.

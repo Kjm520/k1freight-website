@@ -17,6 +17,7 @@ yarn-debug.log*
 # Sensitive Files
 .vscode/
 .env
+*.eml
 
 # Local-only working folders (see global CLAUDE.md conventions)
 /!aux
