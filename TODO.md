@@ -33,4 +33,6 @@ verify DNS changes
 k1apps.dev
 truckload.io
 trkld.io
-k1freight.com
+k1freight.com  (verified 09/02/2026 — all core records correct, see CHANGELOG)
+
+[09/02/2026] Optional hardening, none of it urgent: DNSSEC at Dynadot; CAA record; HSTS header in the nginx block (Dockerfile). Trap: if CAA is ever added it MUST include `0 issue "pki.goog"` or Cloud Run's managed cert renewal breaks.

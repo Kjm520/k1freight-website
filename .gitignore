@@ -17,3 +17,7 @@ yarn-debug.log*
 # Sensitive Files
 .vscode/
 .env
+
+# Local-only working folders (see global CLAUDE.md conventions)
+/!aux
+/!scrap
