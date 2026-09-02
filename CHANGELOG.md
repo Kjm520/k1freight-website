@@ -9,6 +9,7 @@
 - llms.txt revised per Kevin: dual-authority paragraph now says "a real trucking company behind this brokerage" (not "real trucks"/"skin in the game"); summary and How-we-work gained standard-freight framing (move standard freight daily, specialize in critical, adapt when lowest cost is the priority); "same experienced team" replaces "an experienced broker" in the summary
 - Added sameAs to JSON-LD linking the Google Business Profile: Maps share link + stable CID URL (cid=7786980377244906296, verified resolving); closes the site↔profile corroboration loop
 - Dockerfile nginx config: www.k1freight.com now 301-redirects to the bare canonical domain (new server block); existing catch-all marked default_server so bare domain, run.app URL, and health checks serve normally. DNS www CNAME and Cloud Run www domain mapping unchanged — both required for the redirect to be reachable
+- Added LinkedIn company page (linkedin.com/company/k1freight) to JSON-LD sameAs alongside the two Maps URLs
 
 ## 2026-06-18
 

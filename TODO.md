@@ -22,6 +22,9 @@ reviews?
 
 When you next email anyone externally, glance at a Show-original once more; DKIM: PASS with domain k1freight.com is the final ground truth. (Also worth an eventual retirement note: the old test showed Google had been fallback-signing since ~Nov 2025, so this closed a nine-month gap.)
 
+[07/30/2026] TODO: Begin Tier 2 AI/SEO 
+
+[07/30/2026] consider alabamafreight.com domain's inflow effect and if it can be utilized
 
 
 
